@@ -1,0 +1,11 @@
+[
+  {
+    "route": "/blog/introduce-scully",
+    "title": "Introduce Scully",
+    "description": "Talking about Scully for SSG with Angular",
+    "published": true,
+    "slugs": "introduce-about-scully-with-angular",
+    "sourceFile": "introduce-scully.md"
+  },
+  { "route": "/" }
+]
