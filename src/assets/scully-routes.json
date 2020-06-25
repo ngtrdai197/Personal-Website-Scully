@@ -1,11 +1,1 @@
-[
-  {
-    "route": "/blog/introduce-scully",
-    "title": "Introduce Scully",
-    "description": "Talking about Scully for SSG with Angular",
-    "published": true,
-    "slugs": "introduce-about-scully-with-angular",
-    "sourceFile": "introduce-scully.md"
-  },
-  { "route": "/" }
-]
+[{"route":"/blog/introduce-about-@redux/introduce","title":"Introduce about @Redux/toolkit alongside Reactjs","description":"blog description","published":true,"slugs":"part-1","sourceFile":"introduce.md"},{"route":"/blog/introduce-about-@redux/setup-project-with-toolkit-react","title":"Setup @Redux/toolkit alongside Reactjs","description":"Setup Redux/toolkit","published":true,"slugs":"part-2","sourceFile":"setup-project-with-toolkit-react.md"},{"route":"/blog/introduce-scully","title":"Introduce Scully","description":"Talking about Scully for SSG with Angular","published":true,"slugs":"introduce-about-scully-with-angular","sourceFile":"introduce-scully.md"},{"route":"/blog/ngxs/ngxs","title":"ngxs","description":"Ngxs introduce","published":true,"slugs":"Ngxs introduce","sourceFile":"ngxs.md"},{"route":"/blog/ngxs/recipes/authentication","title":"Authentication","description":"Ngxs authentication","published":true,"slugs":"authentication","sourceFile":"authentication.md"},{"route":"/"},{"route":"/portfolio"}]

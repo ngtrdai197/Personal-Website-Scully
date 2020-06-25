@@ -2,12 +2,10 @@ import {
   Component,
   OnInit,
   ViewEncapsulation,
-  AfterViewChecked,
 } from '@angular/core'
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { shareReplay, tap } from 'rxjs/operators'
 
-import { HighlightService } from '../core/services/highlight.service'
 import { ISeo, SeoService } from '../core/services'
 import { environment as env } from '@/environments/environment'
 
@@ -18,12 +16,11 @@ import { environment as env } from '@/environments/environment'
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class BlogComponent implements OnInit, AfterViewChecked {
+export class BlogComponent implements OnInit {
   constructor(
-    private highlightService: HighlightService,
     private readonly scullyRoutesService: ScullyRoutesService,
     private readonly seoService: SeoService,
-  ) {}
+  ) { }
   ngOnInit() {
     this.scullyRoutesService
       .getCurrent()
@@ -37,9 +34,5 @@ export class BlogComponent implements OnInit, AfterViewChecked {
         shareReplay(1),
       )
       .subscribe()
-  }
-
-  ngAfterViewChecked() {
-    this.highlightService.highlightAll()
   }
 }

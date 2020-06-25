@@ -1,27 +1,19 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-home',
-  template: `
-    <ul>
-      <li *ngFor="let route of routes$ | async">
-        <a [routerLink]="[route.route]">{{ route.title }}</a>
-      </li>
-    </ul>
-  `,
+  templateUrl: './home.component.html',
   styles: [],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   routes$ = this.scullyRoutesService.available$.pipe(
-    map((routes) =>
-      routes.filter((route) => {
-        if (route.route.includes('/blog')) {
-          return route
-        }
-      }),
+    map((scullyRoutes) =>
+      scullyRoutes.filter((scullyRoute) => scullyRoute.route.includes('/blog')),
     ),
   )
-  constructor(private scullyRoutesService: ScullyRoutesService) {}
+  constructor(private scullyRoutesService: ScullyRoutesService) { }
+
+  ngOnInit() { }
 }

@@ -1,2 +1,1 @@
-export * from "./highlight.service";
-export * from "./seo.service";
+export * from './seo.service'

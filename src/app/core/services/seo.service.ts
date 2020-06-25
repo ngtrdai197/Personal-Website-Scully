@@ -17,7 +17,7 @@ export class SeoService {
     private readonly meta: Meta,
     private readonly title: Title,
     @Inject(DOCUMENT) private readonly dom: Document,
-  ) {}
+  ) { }
 
   update(seo: ISeo) {
     this.title.setTitle(SeoService.getTitle(seo.title))
@@ -88,14 +88,14 @@ export class SeoService {
 
     this.meta.updateTag({
       name: 'description',
-      content: 'Personal blog by Nguyen Dai',
+      content: 'Personal blog by Dai Nguyen',
     })
-    this.title.setTitle('Nguyen Dai')
+    this.title.setTitle('Dai Nguyen')
     this.updateCanonical()
   }
 
   private static getTitle(title: string) {
-    return `${title} | Nguyen Dai`
+    return `${title} | Dai Nguyen`
   }
 
   private updateCanonical(url: string = environment.baseUrl) {
