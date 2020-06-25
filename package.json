@@ -9,6 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
+    "build:hljs": "tsc -p plugins/hljs",
+    "scully-build": "rm -rf ./dist && tsc -p plugins/hljs && ng build --prod && npm run scully",
     "scully:serve": "scully serve"
   },
   "private": true,
@@ -21,9 +23,11 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "@gammastream/scully-plugin-http404": "^1.0.1",
     "@scullyio/init": "0.0.28",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "bootstrap": "^4.5.0",
     "prismjs": "^1.20.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
@@ -34,6 +38,7 @@
     "@angular/cli": "~9.1.7",
     "@angular/compiler-cli": "~9.1.9",
     "@types/node": "^12.11.1",
+    "scully-plugin-minify-html": "^3.1.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
