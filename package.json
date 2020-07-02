@@ -12,7 +12,7 @@
     "build:hljs": "tsc -p plugins/hljs",
     "scully-build": "rm -rf ./dist && tsc -p plugins/hljs && ng build --prod && npm run scully",
     "scully:serve": "scully serve",
-    "scully:prod": "tsc -p plugins/hljs && ng build --prod && npm run scully -- --nw"
+    "scully:prod": "tsc -p plugins/hljs && ng build --prod && npm run scully -- --nw && npm run scully -- --scanRoutes"
   },
   "private": true,
   "dependencies": {
