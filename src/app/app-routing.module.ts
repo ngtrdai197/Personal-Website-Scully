@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
   },
   {
+    path: 'overview',
+    loadChildren: () => import('./over-view/over-view.module').then(m => m.OverViewModule)
+  },
+  {
     path: '404',
     component: PageNotFoundComponent
   },

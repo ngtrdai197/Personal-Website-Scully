@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
     <p>
       about-me works!
     </p>
+    <ul>
+      <li routerLink="/portfolio">Portfolio</li>
+      <li routerLink="/overview">Overview</li>
+    </ul>
   `,
   styles: [
   ]
