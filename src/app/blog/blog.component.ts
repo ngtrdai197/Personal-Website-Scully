@@ -29,6 +29,7 @@ export class BlogComponent implements OnInit {
           this.seoService.update({
             ...blog,
             url: `${env.baseUrl}${blog.route}`,
+            image: `${env.baseUrl}${blog.image}`
           })
         }),
         shareReplay(1),
