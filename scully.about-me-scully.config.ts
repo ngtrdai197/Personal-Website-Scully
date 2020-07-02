@@ -14,7 +14,7 @@ setPluginConfig(MinifyHtml, minifyHtmlOptions);
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 
 
-const postRenderers = [MinifyHtml, PageNotFoundPlugin]
+const postRenderers = [MinifyHtml]
 
 
 export const config: ScullyConfig = {
@@ -33,7 +33,9 @@ export const config: ScullyConfig = {
       postRenderers: [HljsHtml]
     },
     '/404': {
-      type: RouteTypes.default
+      type: RouteTypes.default,
+      postRenderers: [PageNotFoundPlugin]
     }
   },
+
 }

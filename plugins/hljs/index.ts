@@ -10,6 +10,7 @@ const defaultOptions: HljsHtmlOptions = {
 };
 
 export const hljsHtmlPlugin = (html: string) => {
+    console.log('html', html)
     const customHljsOptions = getPluginConfig<HljsHtmlOptions>(HljsHtml, 'render');
     const hljsOptions = { ...defaultOptions, ...customHljsOptions };
     return html.replace(/\<code\s+class="language/g, '<code class="' + hljsOptions.classList + ' language');
