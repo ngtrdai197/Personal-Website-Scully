@@ -1,7 +1,7 @@
 <app-about-me></app-about-me>
 
 <ul>
-    <li *ngFor="let route of routes$ | async">
-        <a [routerLink]="[route.route]">{{ route.title }}</a>
-    </li>
+  <li *ngFor="let route of routes$ | async">
+    <a [routerLink]="[route.route]" class="md:bg-indigo-lighter">{{ route.title }}</a>
+  </li>
 </ul>

@@ -39,8 +39,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "configs/webpack.config.js"
+            },
             "outputPath": "dist/about-me-scully",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -88,7 +91,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "about-me-scully:build"
           },
@@ -105,6 +108,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "about-me-scully"
 }
