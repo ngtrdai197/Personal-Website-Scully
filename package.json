@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "build:hljs": "tsc -p plugins/hljs",
+    "build:hljs": "rm -rf ./plugins/hljs/build && tsc -p plugins/hljs",
     "scully-build": "rm -rf ./dist && npm run build:hljs && ng build --prod && npm run scully",
     "scully:serve": "scully serve",
     "scully:prod": "npm run build:hljs && ng build --prod && npm run scully -- --nw && npm run scully -- --scanRoutes"

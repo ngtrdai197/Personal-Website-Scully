@@ -1,0 +1,14 @@
+.icon {
+  @apply w-10;
+  @apply h-10;
+  @apply border;
+  @apply border-gray-500;
+  @apply justify-center;
+  @apply items-center;
+  @apply rounded-full;
+  @apply flex;
+  &:hover {
+    @apply text-purple-800;
+    @apply border-purple-800;
+  }
+}

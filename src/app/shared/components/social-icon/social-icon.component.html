@@ -1,0 +1,8 @@
+<div class="grid grid-cols-4 col-span-2 py-5">
+  <a
+    class="icon"
+    *ngFor="let social of socials"
+    [href]="social.url"
+    [innerHtml]="social.svgLink | sanitizer"
+  ></a>
+</div>

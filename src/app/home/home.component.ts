@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { ScullyRoutesService } from '@scullyio/ng-lib'
-import { map } from 'rxjs/operators'
+import { map, tap, shareReplay } from 'rxjs/operators'
+
+import { SeoService, ISeo } from '@/app/core/services'
+import { environment as env } from '@/environments/environment'
 
 @Component({
   selector: 'app-home',
@@ -13,7 +16,18 @@ export class HomeComponent implements OnInit {
       scullyRoutes.filter((scullyRoute) => scullyRoute.route.includes('/blog')),
     ),
   )
-  constructor(private scullyRoutesService: ScullyRoutesService) { }
+  constructor(
+    private scullyRoutesService: ScullyRoutesService,
+    private readonly seoService: SeoService,
+  ) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.seoService.update({
+      title: 'Dai Nguyen',
+      route: `${env.baseUrl}`,
+      image: 'assets/avatar/jpeg',
+      description:
+        'I am a developer who is highly interested in TypeScript. My tech stack has been full-stack TS such as Angular, React with TypeScript and NestJS.',
+    })
+  }
 }
