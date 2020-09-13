@@ -17,20 +17,14 @@ export class SeoService {
     private readonly meta: Meta,
     private readonly title: Title,
     @Inject(DOCUMENT) private readonly dom: Document,
-  ) { }
+  ) {}
 
   update(seo: ISeo) {
     this.title.setTitle(SeoService.getTitle(seo.title))
 
-    this.meta.updateTag({
-      property: 'og:title',
-      content: seo.title,
-    })
+    this.meta.updateTag({ property: 'og:title', content: seo.title })
 
-    this.meta.updateTag({
-      name: 'twitter:title',
-      content: seo.title,
-    })
+    this.meta.updateTag({ name: 'twitter:title', content: seo.title })
 
     this.meta.updateTag({
       name: 'twitter:description',
@@ -42,30 +36,28 @@ export class SeoService {
       content: seo.description,
     })
 
-    this.meta.updateTag({
-      name: 'description',
-      content: seo.description,
-    })
+    this.meta.updateTag({ name: 'description', content: seo.description })
+
+    this.meta.updateTag({ property: 'og:url', content: seo.url })
+
+    this.meta.updateTag({ name: 'twitter:creator', content: '@nguyendai.dev' })
 
     this.meta.updateTag({
-      property: 'og:url',
-      content: seo.url,
+      name: 'twitter:card',
+      content: 'summary_large_image',
     })
+
+    this.meta.updateTag({ property: 'og:type', content: 'website' })
 
     if (seo.tags?.length) {
       this.meta.updateTag({ name: 'keywords', content: seo.tags.join(', ') })
     }
 
     if (seo.image) {
-      this.meta.updateTag({
-        name: 'twitter:image',
-        content: seo.image,
-      })
-
-      this.meta.updateTag({
-        property: 'og:image',
-        content: seo.image,
-      })
+      this.meta.updateTag({ name: 'twitter:image', content: seo.image })
+      this.meta.updateTag({ property: 'og:image', content: seo.image })
+      this.meta.updateTag({ property: 'og:image:width', content: '150' })
+      this.meta.updateTag({ property: 'og:image:height', content: '150' })
     }
 
     this.updateCanonical(seo.url)
