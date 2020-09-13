@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
     this.seoService.update({
       title: 'Dai Nguyen',
       route: `${env.baseUrl}`,
-      image: 'assets/avatar/jpeg',
+      url: `${env.baseUrl}`,
+      image: `${env.baseUrl}/assets/avatar/jpeg`,
       description:
         'I am a developer who is highly interested in TypeScript. My tech stack has been full-stack TS such as Angular, React with TypeScript and NestJS.',
     })
