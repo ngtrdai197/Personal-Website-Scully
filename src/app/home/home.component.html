@@ -1,7 +1,16 @@
 <app-about-me></app-about-me>
+<div class="bg-blue-500 bg-opacity-100 text-white">dadasad</div>
+
+
+<h1 class="my-8 text-center text-6xl font-bold"><span class="text-teal-500">TailwindCSS</span> and <span class="text-red-600">Angular</span> is awesome!</h1>
+<p class="text-center text-3xl">Thanks for reading!</p>
 
 <ul>
   <li *ngFor="let route of routes$ | async">
-    <a [routerLink]="[route.route]" class="md:bg-indigo-lighter">{{ route.title }}</a>
+    <a
+      [routerLink]="[route.route]"
+      class="bg-cs_red"
+      >{{ route.title }}</a
+    >
   </li>
 </ul>

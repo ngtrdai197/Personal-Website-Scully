@@ -2,7 +2,7 @@ import { ScullyConfig, RouteTypes, setPluginConfig } from '@scullyio/scully'
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404'
 import { MinifyHtml } from 'scully-plugin-minify-html'
 
-import { HljsHtml } from './plugins/hljs'
+import { HljsHtml } from './plugins/hljs/build'
 
 const PageNotFoundPlugin = getHttp404Plugin()
 const minifyHtmlOptions = {
