@@ -3,7 +3,7 @@ module.exports = {
   separator: ':',
   purge: {
     enabled: true, // set true to enable => purge css
-    content: ['./src/**/*.html'],
+    content: ['./src/**/*.html', './src/**/*.ts'],
   },
   theme: {
     screens: {
