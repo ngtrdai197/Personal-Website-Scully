@@ -3,6 +3,7 @@ title: "Introduce Scully"
 description: "Talking about Scully for SSG with Angular"
 published: true
 slugs: introduce-about-scully-with-angular
+tags: "Scully"
 ---
 
 # Introduce Scully
