@@ -1,2 +1,2 @@
-*.d.ts
-*.js
+/build/*.d.ts
+/build/*.js
