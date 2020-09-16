@@ -6,6 +6,7 @@ import {
   SocialIconComponent,
   CopyRightComponent,
   NavigationComponent,
+  ToggleThemeComponent
 } from './components'
 import { SanitizerPipe } from './pipes/sanitizer.pipe'
 
@@ -14,6 +15,7 @@ const COMPONENTS = [
   CopyRightComponent,
   NavigationComponent,
   SanitizerPipe,
+  ToggleThemeComponent
 ]
 
 @NgModule({

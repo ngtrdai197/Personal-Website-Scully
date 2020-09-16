@@ -8,7 +8,13 @@ import { environment as env } from '@/environments/environment'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: [],
+  styles: [
+    `
+      .left-side {
+        max-height: 465px;
+      }
+    `,
+  ],
 })
 export class HomeComponent implements OnInit {
   routes$ = this.scullyRoutesService.available$.pipe(

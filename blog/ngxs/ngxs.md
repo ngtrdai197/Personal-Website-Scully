@@ -3,6 +3,7 @@ title: ngxs
 description: 'Ngxs introduce'
 published: true
 slugs: 'Ngxs introduce'
+tags: ["Angular", "Ngxs"]
 
 ---
 # Ngxs introduce

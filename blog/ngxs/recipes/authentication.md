@@ -4,6 +4,7 @@ description: 'Ngxs authentication'
 published: true
 slugs: 'authentication'
 image: 'assets/logo.png'
+tags: ["Angular", "Ngxs"]
 
 ---
 

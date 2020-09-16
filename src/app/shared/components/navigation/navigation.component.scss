@@ -1,10 +1,7 @@
 .nav-item {
-  @apply px-1;
-  @apply text-gray-700;
+  @apply px-1 ;
   &:hover {
-    @apply text-purple-700;
-    @apply underline;
-    @apply  cursor-pointer;
+    @apply text-purple-700 underline cursor-pointer;
   }
 }
 .active {

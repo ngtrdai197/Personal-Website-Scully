@@ -2,8 +2,8 @@ module.exports = {
   prefix: '',
   separator: ':',
   purge: {
-    enabled: false, // set true to enable => purge css
-    content: ['./src/**/*.html'],
+    enabled: true, // set true to enable => purge css
+    content: ['./src/**/*.html', './src/**/*.ts'],
   },
   theme: {
     screens: {

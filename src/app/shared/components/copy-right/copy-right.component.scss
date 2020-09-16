@@ -1,8 +1,6 @@
 .coding {
-  @apply cursor-pointer;
-  @apply text-purple-700;
+  @apply cursor-pointer text-purple-700;
   &:hover {
-    @apply text-purple-500;
-    @apply underline;
+    @apply text-purple-500 underline;
   }
 }
