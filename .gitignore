@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/plugins/hljs/build
 
 # profiling files
 chrome-profiler-events*.json
