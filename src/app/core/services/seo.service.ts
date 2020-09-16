@@ -73,9 +73,13 @@ export class SeoService {
     this.meta.removeTag("property='og:description'")
     this.meta.removeTag("property='og:url'")
     this.meta.removeTag("property='og:image'")
+    this.meta.removeTag("property='og:image:width'")
+    this.meta.removeTag("property='og:image:height'")
     this.meta.removeTag("name='twitter:title'")
     this.meta.removeTag("name='twitter:description'")
     this.meta.removeTag("name='twitter:image'")
+    this.meta.removeTag("name='twitter:card'")
+    this.meta.removeTag("name='twitter:creator'")
     this.meta.removeTag("name='keywords'")
 
     this.meta.updateTag({
