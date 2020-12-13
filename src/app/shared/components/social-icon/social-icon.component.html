@@ -2,7 +2,8 @@
   <a
     class="icon"
     *ngFor="let social of socials"
-    [href]="social.url"
+    target="_blank"
+    [href]="social.link"
     [innerHtml]="social.svgLink | sanitizer"
   ></a>
 </div>

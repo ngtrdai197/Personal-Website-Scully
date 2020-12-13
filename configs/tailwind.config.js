@@ -25,15 +25,24 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
+      backgroundColor: {
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+      },
       colors: {
-        cs_blue: {
-          lighter: '#b3bcf5',
-          default: '#5c6ac4',
-          dark: '#202e78',
-        },
-        cs_red: {
-          default: '#de3618',
-        },
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        textColor: 'var(--text-color)',
+      },
+      boxShadow: {
+        common: 'var(--shadow)',
+      },
+      // position
+      inset: {
+        '-10': '10px',
+        '-15': '15px',
+        '-20': '20px',
+        '-25': '25px',
       },
     },
   },

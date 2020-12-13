@@ -6,7 +6,7 @@
 
 :root .theme-dark {
   --primary: theme('colors.orange.500');
-  --secondary: theme('colors.purple.400');
+  --secondary: theme('colors.yellow.600');
   --background-color: theme('colors.gray.800');
   --text-color: theme('colors.white');
   --gray-light: theme('colors.gray.300');
@@ -18,7 +18,7 @@
 
 :root .theme-light {
   --primary: theme('colors.purple.800');
-  --secondary: theme('colors.yellow.600');
+  --secondary: theme('colors.purple.400');
   --background-color: theme('colors.white');
   --text-color: theme('colors.black');
   --gray-light: theme('colors.gray.500');

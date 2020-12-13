@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 
-import { facebook, twitter } from '../../svgIcon'
+import { facebook, github, linkedin, twitter } from '@/app/shared/svgIcon'
 import { ISocial } from '@/app/core/models/social.interface'
-
 @Component({
   selector: 'app-social-icon',
   templateUrl: './social-icon.component.html',
@@ -10,10 +9,10 @@ import { ISocial } from '@/app/core/models/social.interface'
 })
 export class SocialIconComponent implements OnInit {
   public socials: Array<ISocial> = [
-    { svgLink: twitter, link: 'https://github.com/nartc' },
-    { svgLink: facebook, link: 'https://www.linkedin.com/in/chauntran/' },
-    { svgLink: facebook, link: 'https://www.linkedin.com/in/chauntran/' },
-    { svgLink: facebook, link: 'https://www.linkedin.com/in/chauntran/' },
+    { svgLink: twitter, link: 'https://twitter.com/ngtrdai197' },
+    { svgLink: facebook, link: 'https://www.facebook.com/ngtrdai197' },
+    { svgLink: github, link: 'https://github.com/ngtrdai197' },
+    { svgLink: linkedin, link: 'https://www.linkedin.com/in/ngtrdai197/' },
   ]
   constructor() {}
 

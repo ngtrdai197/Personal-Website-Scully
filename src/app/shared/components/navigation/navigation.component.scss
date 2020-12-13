@@ -1,9 +1,9 @@
 .nav-item {
-  @apply px-1 ;
+  @apply px-1;
   &:hover {
-    @apply text-purple-700 underline cursor-pointer;
+    @apply text-secondary underline cursor-pointer;
   }
 }
 .active {
-  @apply text-purple-800;
+  color: var(--primary);
 }

@@ -1,3 +1,4 @@
+
 .icon {
   @apply w-10;
   @apply h-10;
@@ -8,7 +9,21 @@
   @apply rounded-full;
   @apply flex;
   &:hover {
-    @apply text-purple-800;
-    @apply border-purple-800;
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  ::ng-deep svg {
+    path {
+      fill: var(--text-color);
+      stroke: var(--text-color);
+    }
+  }
+  &:hover {
+    ::ng-deep svg {
+      path {
+        fill: var(--primary);
+        stroke: var(--primary);
+      }
+    }
   }
 }

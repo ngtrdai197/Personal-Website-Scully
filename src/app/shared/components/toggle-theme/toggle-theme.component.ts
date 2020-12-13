@@ -14,7 +14,7 @@ import { ThemeService } from '@/app/core/services'
 })
 export class ToggleThemeComponent {
   @HostBinding('class') get themeToggleClasses() {
-    return `w-10 h-10 lg:flex lg:items-center lg:justify-center cursor-pointer absolute top-0 right-0`
+    return `w-10 h-10 cursor-pointer absolute -top-10 -right-10`
   }
 
   @HostListener('click')
