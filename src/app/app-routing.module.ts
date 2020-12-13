@@ -11,16 +11,6 @@ const routes: Routes = [
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
   },
-  // {
-  //   path: 'portfolio',
-  //   loadChildren: () =>
-  //     import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
-  // },
-  // {
-  //   path: 'overview',
-  //   loadChildren: () =>
-  //     import('./over-view/over-view.module').then((m) => m.OverViewModule),
-  // },
   {
     path: '404',
     component: PageNotFoundComponent,

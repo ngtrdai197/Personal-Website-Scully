@@ -1,0 +1,11 @@
+a {
+  ::ng-deep svg {
+    fill: var(--text-color);
+    stroke: var(--text-color);
+
+    &:hover {
+      fill: var(--primary);
+      stroke: var(--primary);
+    }
+  }
+}
