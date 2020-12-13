@@ -12,7 +12,9 @@
     "build:hljs": "tsc -p plugins/hljs",
     "scully-build": "rm -rf ./dist && npm run build:hljs && ng build --prod && npm run scully",
     "scully:serve": "scully serve",
-    "scully:prod": "rm -rf ./dist && npm run build:hljs && ng build --prod && npm run scully -- --nw && npm run scully -- --scanRoutes"
+    "scully:prod": "rm -rf ./dist && npm run build:hljs && ng build --prod && npm run scully -- --scanRoutes && npm run pwa:regen",
+    "pwa:regen": "rm dist/static/ngsw.json;node_modules/.bin/ngsw-config dist/static ./ngsw-config.json",
+    "start-pwa": "ng build --prod && npm run pwa:regen && http-server -p 8080 -c-1 dist/static"
   },
   "private": true,
   "dependencies": {
