@@ -1,4 +1,4 @@
-import { ApplicationRef, Component, OnDestroy, OnInit } from '@angular/core'
+import { ApplicationRef, Component, OnDestroy } from '@angular/core'
 import { SwUpdate } from '@angular/service-worker'
 import { interval, concat, Subscription } from 'rxjs'
 import { tap, mapTo, startWith, first } from 'rxjs/operators'
@@ -7,7 +7,7 @@ import { tap, mapTo, startWith, first } from 'rxjs/operators'
   templateUrl: 'side.component.html',
   styleUrls: ['side.component.scss'],
 })
-export class SideComponent implements OnInit, OnDestroy {
+export class SideComponent implements OnDestroy {
   public hasUpdate$ = this.swUpdate.available.pipe(
     tap(console.log),
     mapTo(true),
@@ -34,8 +34,9 @@ export class SideComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnInit() {}
   ngOnDestroy() {
-    this.subscription.unsubscribe()
+    if (this.subscription) {
+      this.subscription.unsubscribe()
+    }
   }
 }
