@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { map } from 'rxjs/operators'
 
-import { SeoService } from '@/app/core/services'
+import { SeoService } from '@/core/services'
 import { environment as env } from '@/environments/environment'
 
 @Component({

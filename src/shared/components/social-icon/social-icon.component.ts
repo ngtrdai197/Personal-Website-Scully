@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 
-import { facebook, github, linkedin, twitter } from '@/app/shared/svgIcon'
-import { ISocial } from '@/app/core/models/social.interface'
+import { facebook, github, linkedin, twitter } from '@/shared/svgIcon'
+import { ISocial } from '@/core/models/social.interface'
 @Component({
   selector: 'app-social-icon',
   templateUrl: './social-icon.component.html',

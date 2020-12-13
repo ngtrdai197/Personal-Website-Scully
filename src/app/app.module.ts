@@ -4,7 +4,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { CoreModule } from './core/core.module'
+import { CoreModule } from '@/core/core.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({

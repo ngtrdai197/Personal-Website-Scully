@@ -6,7 +6,7 @@ import {
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { shareReplay, tap } from 'rxjs/operators'
 
-import { ISeo, SeoService } from '../core/services'
+import { ISeo, SeoService } from '@/core/services'
 import { environment as env } from '@/environments/environment'
 
 @Component({

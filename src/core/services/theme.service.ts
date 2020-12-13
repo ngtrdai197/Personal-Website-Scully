@@ -1,6 +1,6 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core'
 
-import { THEME } from '@/app/shared/enums/theme.enum'
+import { THEME } from '@/shared/enums/theme.enum'
 import { BehaviorSubject } from 'rxjs'
 @Injectable({
   providedIn: 'root',

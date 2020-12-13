@@ -1,5 +1,5 @@
 import { Component, HostListener, HostBinding } from '@angular/core'
-import { ThemeService } from '@/app/core/services'
+import { ThemeService } from '@/core/services'
 
 @Component({
   selector: 'app-toggle-theme',
