@@ -56,9 +56,6 @@
           },
           "configurations": {
             "production": {
-              "customWebpackConfig": {
-                "path": "configs/webpack-prod.config.js"
-              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

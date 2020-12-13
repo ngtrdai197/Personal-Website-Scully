@@ -1,7 +1,7 @@
 import { ApplicationRef, Component, OnDestroy, OnInit } from '@angular/core'
 import { SwUpdate } from '@angular/service-worker'
 import { interval, concat, Subscription } from 'rxjs'
-import { tap, mapTo, startWith, first, takeUntil } from 'rxjs/operators'
+import { tap, mapTo, startWith, first } from 'rxjs/operators'
 @Component({
   selector: 'app-side',
   templateUrl: 'side.component.html',
