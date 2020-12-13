@@ -5,11 +5,13 @@ import { ScullyLibModule } from '@scullyio/ng-lib'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { CoreModule } from '@/core/core.module'
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
-  imports: [BrowserModule, CoreModule, AppRoutingModule, ScullyLibModule],
+  imports: [BrowserModule, CoreModule, AppRoutingModule, ScullyLibModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [],
   bootstrap: [AppComponent],
 })
