@@ -7,7 +7,6 @@
         vm.hasUpdate ? 'New version available 🚀' : 'Nguyen Dai'
       "
       [class.has-new-version]="vm.hasUpdate"
-      (click)="reload(vm.hasUpdate)"
     >
       <ng-container
         *ngIf="!vm.hasUpdate"
@@ -54,5 +53,6 @@ Click here to download a new version"
       [class.cursor-pointer]="vm.hasUpdate"
       src="assets/avatar.jpeg"
       alt=""
+      (click)="reload(vm.hasUpdate)"
     /> </abbr
 ></ng-template>

@@ -1,7 +1,7 @@
 import { ApplicationRef, Component, OnDestroy } from '@angular/core'
 import { SwUpdate } from '@angular/service-worker'
 import { interval, concat, Subscription } from 'rxjs'
-import { tap, mapTo, startWith, first } from 'rxjs/operators'
+import { mapTo, startWith, first, map } from 'rxjs/operators'
 @Component({
   selector: 'app-side',
   templateUrl: 'side.component.html',
@@ -9,7 +9,7 @@ import { tap, mapTo, startWith, first } from 'rxjs/operators'
 })
 export class SideComponent implements OnDestroy {
   public hasUpdate$ = this.swUpdate.available.pipe(
-    tap(console.log),
+    map(({ type }) => console.log(type)),
     mapTo(true),
     startWith(false),
   )
@@ -23,7 +23,7 @@ export class SideComponent implements OnDestroy {
       const appIsStable$ = appRef.isStable.pipe(
         first((isStable) => isStable === true),
       )
-      const everyFiveMinutes$ = interval(1 * 60 * 1000) // every 5 minutes
+      const everyFiveMinutes$ = interval(5 * 60 * 1000) // every 5 minutes
       const everyFiveMinutesOnceAppIsStable$ = concat(
         appIsStable$,
         everyFiveMinutes$,
