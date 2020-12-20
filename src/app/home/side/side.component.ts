@@ -39,4 +39,9 @@ export class SideComponent implements OnDestroy {
       this.subscription.unsubscribe()
     }
   }
+
+  public reload(hasUpdate: boolean) {
+    if (!hasUpdate) return
+    window?.location?.reload()
+  }
 }

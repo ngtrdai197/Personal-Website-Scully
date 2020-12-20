@@ -1,3 +1,40 @@
 .name {
   @apply text-lg font-bold mb-4;
 }
+.wrapper-avatar {
+  @apply rounded-full p-2 relative;
+  &.has-new-version:before {
+    content: '';
+    z-index: -1;
+    border-radius: inherit; /* !important */
+    background: linear-gradient(
+      to bottom right,
+      #b827fc 0%,
+      #2c90fc 25%,
+      #b8fd33 50%,
+      #fec837 75%,
+      #fd1892 100%
+    );
+    @apply absolute top-0 right-0 bottom-0 left-0 opacity-0 transition-opacity duration-200 ease-out;
+  }
+  &.has-new-version:after {
+    @apply block absolute py-1 px-2 border border-solid rounded z-10 text-xs;
+    width: max-content;
+    opacity: 0;
+    content: attr(data-tooltip);
+    top: 50%;
+    left: 100%;
+    transform: translateX(10%) translateY(-50%);
+    background: transparent;
+    border-color: var(--text-color);
+    color: var(--text-color);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1),
+      transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  }
+  &.has-new-version {
+    &:after,
+    &:before {
+      @apply opacity-100;
+    }
+  }
+}

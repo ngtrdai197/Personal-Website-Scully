@@ -1,13 +1,27 @@
 <div class="wrapper p-4">
   <div class="avatar flex justify-start pt-2 mb-2">
-    <img
+    <div
       *ngIf="{ hasUpdate: hasUpdate$ | async } as vm"
-      class="rounded-full w-16"
-      [class.pointer-events-none]="!vm.hasUpdate"
-      [class.cursor-pointer]="vm.hasUpdate"
-      src="assets/avatar.jpeg"
-      alt=""
-    />
+      class="wrapper-avatar"
+      [attr.data-tooltip]="
+        vm.hasUpdate ? 'New version available 🚀' : 'Nguyen Dai'
+      "
+      [class.has-new-version]="vm.hasUpdate"
+      (click)="reload(vm.hasUpdate)"
+    >
+      <abbr
+        title="
+      Click here to download a new version"
+      >
+        <img
+          class="rounded-full w-16"
+          [class.pointer-events-none]="!vm.hasUpdate"
+          [class.cursor-pointer]="vm.hasUpdate"
+          src="assets/avatar.jpeg"
+          alt=""
+        />
+      </abbr>
+    </div>
   </div>
   <div class="name">Nguyen Dai</div>
   <div class="text-sm">
