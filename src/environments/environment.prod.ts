@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: "https://test-scully.netlify.app",
+  baseUrl: "https://nguyendai-scully.netlify.app/",
 };
