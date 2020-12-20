@@ -2,7 +2,7 @@ module.exports = {
   prefix: '',
   separator: ':',
   purge: {
-    enabled: true, // set true to enable => purge css
+    enabled: false, // set true to enable => purge css
     content: ['./src/**/*.html', './src/**/*.ts'],
   },
   theme: {

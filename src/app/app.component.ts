@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 
-import { ISeo, SeoService, ThemeService } from '@/core/services'
-import { environment as env } from '@/environments/environment'
+import { SeoService, ThemeService } from '@/core/services'
 
 @Component({
   selector: 'app-root',
