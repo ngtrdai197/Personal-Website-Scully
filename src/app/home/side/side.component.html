@@ -9,18 +9,18 @@
       [class.has-new-version]="vm.hasUpdate"
       (click)="reload(vm.hasUpdate)"
     >
-      <abbr
-        title="
-      Click here to download a new version"
+      <ng-container
+        *ngIf="!vm.hasUpdate"
+        [ngTemplateOutlet]="tmplNoNewVersion"
+        [ngTemplateOutletContext]="{ vm: vm }"
       >
-        <img
-          class="rounded-full w-16"
-          [class.pointer-events-none]="!vm.hasUpdate"
-          [class.cursor-pointer]="vm.hasUpdate"
-          src="assets/avatar.jpeg"
-          alt=""
-        />
-      </abbr>
+      </ng-container>
+      <ng-container
+        *ngIf="vm.hasUpdate"
+        [ngTemplateOutlet]="tmplNewVersion"
+        [ngTemplateOutletContext]="{ vm: vm }"
+      >
+      </ng-container>
     </div>
   </div>
   <div class="name">Nguyen Dai</div>
@@ -32,3 +32,27 @@
   <app-social-icon></app-social-icon>
   <app-copy-right></app-copy-right>
 </div>
+
+<ng-template #tmplNoNewVersion let-vm="vm">
+  <img
+    class="rounded-full w-16"
+    [class.pointer-events-none]="!vm.hasUpdate"
+    [class.cursor-pointer]="vm.hasUpdate"
+    src="assets/avatar.jpeg"
+    alt=""
+  />
+</ng-template>
+
+<ng-template #tmplNewVersion let-vm="vm">
+  <abbr
+    title="
+Click here to download a new version"
+  >
+    <img
+      class="rounded-full w-16"
+      [class.pointer-events-none]="!vm.hasUpdate"
+      [class.cursor-pointer]="vm.hasUpdate"
+      src="assets/avatar.jpeg"
+      alt=""
+    /> </abbr
+></ng-template>
