@@ -12,14 +12,26 @@ const routes: Routes = [
     path: '',
     component: AboutMeComponent,
     children: [
-      { path: '', component: IntroduceComponent },
-      { path: 'experiences', component: ExperiencesComponent },
+      {
+        path: '',
+        component: IntroduceComponent,
+        data: { animation: 'introduce' },
+      },
+      {
+        path: 'experiences',
+        component: ExperiencesComponent,
+        data: { animation: 'experiences' },
+      },
     ],
   },
 ]
 
 @NgModule({
   declarations: [AboutMeComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    SharedModule,
+  ],
 })
 export class AboutMeModule {}

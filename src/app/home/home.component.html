@@ -1,11 +1,14 @@
 <div class="lg:container mx-auto px-4 pt-6">
-  <div class="grid grid-cols-12 gap-2"> 
+  <div class="grid grid-cols-12 gap-2">
     <div class="left-side xs:col-span-12 md:col-span-4 shadow-common relative">
       <app-toggle-theme></app-toggle-theme>
       <app-side></app-side>
     </div>
-    <div class="xs:col-span-12 md:col-span-8 shadow-common mb-8 relative">
-      <router-outlet></router-outlet>
+    <div
+      class="xs:col-span-12 md:col-span-8 shadow-common mb-8 relative"
+      [@routeAnimations]="prepareRoute(outlet)"
+    >
+      <router-outlet #outlet="outlet"></router-outlet>
     </div>
   </div>
 </div>

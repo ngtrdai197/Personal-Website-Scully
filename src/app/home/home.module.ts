@@ -16,11 +16,13 @@ const routes: Routes = [
         path: 'me',
         loadChildren: () =>
           import('@/app/about-me/about-me.module').then((m) => m.AboutMeModule),
+        data: { animation: 'me' },
       },
       {
         path: 'blog-list',
         loadChildren: () =>
           import('@/app/blogs/blogs.module').then((m) => m.BlogsModule),
+        data: { animation: 'blog-list' },
       },
     ],
   },
@@ -28,6 +30,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [HomeComponent, SideComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    SharedModule,
+  ],
 })
 export class HomeModule {}

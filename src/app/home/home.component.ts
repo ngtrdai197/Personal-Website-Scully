@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core'
+import { RouterOutlet } from '@angular/router'
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { map } from 'rxjs/operators'
+
+import { slideInAnimation } from '@/shared/slide-animation'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,6 +14,7 @@ import { map } from 'rxjs/operators'
       }
     `,
   ],
+  animations: [slideInAnimation],
 })
 export class HomeComponent implements OnInit {
   routes$ = this.scullyRoutesService.available$.pipe(
@@ -18,11 +22,13 @@ export class HomeComponent implements OnInit {
       scullyRoutes.filter((scullyRoute) => scullyRoute.route.includes('/blog')),
     ),
   )
-  constructor(
-    private scullyRoutesService: ScullyRoutesService,
-  ) {}
+  constructor(private scullyRoutesService: ScullyRoutesService) {}
 
-  ngOnInit() {
-    
+  ngOnInit() {}
+
+  public prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+    )
   }
 }
