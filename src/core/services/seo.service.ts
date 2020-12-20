@@ -3,7 +3,7 @@ import { Meta, Title } from '@angular/platform-browser'
 import { DOCUMENT } from '@angular/common'
 import { ScullyRoute } from '@scullyio/ng-lib'
 
-import { environment } from '@/environments/environment'
+import { environment as env } from '@/environments/environment'
 
 export interface ISeo extends ScullyRoute {
   url?: string
@@ -19,7 +19,18 @@ export class SeoService {
     @Inject(DOCUMENT) private readonly dom: Document,
   ) {}
 
-  update(seo: ISeo) {
+  public get baseSeo(): ISeo {
+    return {
+      title: 'Dai Nguyen',
+      route: `${env.baseUrl}`,
+      url: `${env.baseUrl}`,
+      image: `${env.baseUrl}/assets/avatar.jpeg`,
+      description:
+        'I am a developer who is highly interested in TypeScript. My tech stack has been full-stack TS such as Angular, React with TypeScript and NestJS.',
+    }
+  }
+
+  public update(seo: ISeo) {
     this.title.setTitle(SeoService.getTitle(seo.title))
 
     this.meta.updateTag({ property: 'og:title', content: seo.title })
@@ -63,12 +74,12 @@ export class SeoService {
     this.updateCanonical(seo.url)
   }
 
-  updateTagTitle(tagName: string) {
+  public updateTagTitle(tagName: string) {
     this.resetMeta()
     this.title.setTitle(SeoService.getTitle(tagName))
   }
 
-  resetMeta() {
+  public resetMeta() {
     this.meta.removeTag("property='og:title'")
     this.meta.removeTag("property='og:description'")
     this.meta.removeTag("property='og:url'")
@@ -94,7 +105,7 @@ export class SeoService {
     return `${title} | Developer`
   }
 
-  private updateCanonical(url: string = environment.baseUrl) {
+  private updateCanonical(url: string = env.baseUrl) {
     let head = this.dom.querySelector('head')
     if (head != null && Array.isArray(head)) {
       head = head[0]

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 
-import { SeoService, ThemeService } from '@/core/services'
+import { ISeo, SeoService, ThemeService } from '@/core/services'
 import { environment as env } from '@/environments/environment'
 
 @Component({
@@ -17,13 +17,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.seoService.update({
-      title: 'Dai Nguyen',
-      route: `${env.baseUrl}`,
-      url: `${env.baseUrl}`,
-      image: `${env.baseUrl}/assets/avatar.jpeg`,
-      description:
-        'I am a developer who is highly interested in TypeScript. My tech stack has been full-stack TS such as Angular, React with TypeScript and NestJS.',
-    })
+    this.seoService.update(this.seoService.baseSeo)
   }
 }
