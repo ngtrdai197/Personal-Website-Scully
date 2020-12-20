@@ -91,7 +91,7 @@ export class SeoService {
   }
 
   private static getTitle(title: string) {
-    return `${title} | Dai Nguyen`
+    return `${title} | Developer`
   }
 
   private updateCanonical(url: string = environment.baseUrl) {
