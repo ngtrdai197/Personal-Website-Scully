@@ -11,8 +11,9 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
+      { path: '', redirectTo: 'me', pathMatch: 'full' },
       {
-        path: '',
+        path: 'me',
         loadChildren: () =>
           import('@/app/about-me/about-me.module').then((m) => m.AboutMeModule),
       },
