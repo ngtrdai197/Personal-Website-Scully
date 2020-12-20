@@ -28,7 +28,9 @@
         >
           {{ exp.title }}
         </p>
-        <p class="text-md font-semibold mb-2">{{ exp.company }}</p>
+        <p class="text-md font-semibold mb-2">
+          <a [href]="exp.url" target="_blank" class="hover:underline"> {{ exp.company }}</a>
+        </p>
         <p class="mb-1 text-sm font-medium">{{ exp.position }}</p>
         <p class="mt-1 text-xs italic">{{ exp.tech }}</p>
       </div>
