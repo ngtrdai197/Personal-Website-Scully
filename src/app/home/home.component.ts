@@ -3,7 +3,8 @@ import { RouterOutlet } from '@angular/router'
 import { ScullyRoutesService } from '@scullyio/ng-lib'
 import { map } from 'rxjs/operators'
 
-import { slideInAnimation } from '@/shared/slide-animation'
+import { swipeDownInAnimation } from '@/shared/slide-animation'
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,7 +15,7 @@ import { slideInAnimation } from '@/shared/slide-animation'
       }
     `,
   ],
-  animations: [slideInAnimation],
+  animations: [swipeDownInAnimation],
 })
 export class HomeComponent implements OnInit {
   routes$ = this.scullyRoutesService.available$.pipe(

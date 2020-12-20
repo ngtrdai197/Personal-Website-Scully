@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
 
-import { arrowDown } from '@/shared/svgIcon'
+import { arrowDown, arrowUp } from '@/shared/svgIcon'
 import { swipeDownInAnimation } from '@/shared/slide-animation'
 
 @Component({
@@ -9,18 +9,28 @@ import { swipeDownInAnimation } from '@/shared/slide-animation'
   template: `
     <section class="wrapper-me" [@routeAnimations]="prepareRoute(outlet)">
       <router-outlet #outlet="outlet"></router-outlet>
-      <a
-        class="absolute -bottom-50 -left-center translate-x-1/2 cursor-pointer"
-        [innerHTML]="svgArrowDown | sanitizer"
-        routerLink="experiences"
-      ></a>
+      <div class="mb-16">
+        <a
+          class="navigate -bottom-35"
+          [innerHTML]="svgIcon.svgArrowUp | sanitizer"
+          routerLink="/me"
+        ></a>
+        <a
+          class="navigate -bottom-10"
+          [innerHTML]="svgIcon.svgArrowDown | sanitizer"
+          routerLink="experiences"
+        ></a>
+      </div>
     </section>
   `,
   styleUrls: ['./about-me.component.scss'],
   animations: [swipeDownInAnimation],
 })
 export class AboutMeComponent implements OnInit {
-  svgArrowDown = arrowDown
+  public svgIcon = {
+    svgArrowDown: arrowDown,
+    svgArrowUp: arrowUp,
+  }
   constructor() {}
 
   ngOnInit(): void {}

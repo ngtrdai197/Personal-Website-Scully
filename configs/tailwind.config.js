@@ -7,27 +7,18 @@ module.exports = {
   },
   theme: {
     screens: {
-      /** https://tailwindcss.com/docs/breakpoints */
-      /**
-       *  'sm': {'min': '640px', 'max': '767px'},
-          'md': {'min': '768px', 'max': '1023px'},
-          'lg': {'min': '1024px', 'max': '1279px'},
-          'xl': {'min': '1280px'},
-       */
       xs: '320px',
       sm: '640px',
-      // => @media (min-width: 640px) { ... }
       md: '768px',
-      // => @media (min-width: 768px) { ... }
       lg: '1024px',
-      // => @media (min-width: 1024px) { ... }
       xl: '1280px',
-      // => @media (min-width: 1280px) { ... }
     },
     extend: {
       backgroundColor: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',
+        'time-line-right': 'var(--time-line-right)',
+        'time-line-left': 'var(--time-line-left)',
       },
       colors: {
         primary: 'var(--primary)',

@@ -27,11 +27,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [AboutMeComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    SharedModule,
-  ],
+  declarations: [AboutMeComponent, ExperiencesComponent],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
 })
 export class AboutMeModule {}
