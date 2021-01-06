@@ -25,15 +25,15 @@ export class ExperiencesComponent implements OnInit {
       tech:
         'Technologies: ReactJs, NestJs framework (NodeJs), Typescipt, PostgresQL, MySQL (TypeORM), Docker, ...',
     },
-    {
-      time: 'September 2020 - November 2020',
-      title: 'Software Development Engineer',
-      company: '@FAVIE-TECH',
-      url:'https://favie.tech/',
-      position: 'Fullstack web developer',
-      tech:
-        'Technologies: Angular, NestJs framework (NodeJs), GraphQL, Typescipt, PostgresQL (TypeORM), Docker, ...',
-    },
+    // {
+    //   time: 'September 2020 - November 2020',
+    //   title: 'Software Development Engineer',
+    //   company: '@FAVIE-TECH',
+    //   url:'https://favie.tech/',
+    //   position: 'Fullstack web developer',
+    //   tech:
+    //     'Technologies: Angular, NestJs framework (NodeJs), GraphQL, Typescipt, PostgresQL (TypeORM), Docker, ...',
+    // },
     {
       time: 'November 2019 - November 2020',
       title: 'Software Development Engineer',
@@ -44,7 +44,7 @@ export class ExperiencesComponent implements OnInit {
         'Technologies: Angular, NestJs framework (NodeJs), GraphQL, Typescipt, MongoDB, Docker, ...',
     },
     {
-      time: 'February 2019 - October 2019',
+      time: 'January 2019 - October 2019',
       title: 'Software Development Engineer',
       company: '@JANETO',
       url: 'https://janeto.com/vi/',

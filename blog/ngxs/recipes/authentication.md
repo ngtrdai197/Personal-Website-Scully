@@ -4,11 +4,10 @@ description: 'Ngxs authentication'
 published: true
 slugs: 'authentication'
 image: 'assets/logo.png'
-tags: ["Angular", "Ngxs"]
-
+tags: ['Angular', 'Ngxs']
 ---
 
-# Authentication
+### Authentication
 
 Authentication is a common theme across many applications. Let's take a look
 at how we would implement this in NGXS.
@@ -17,17 +16,17 @@ First, let's define our state model and our actions:
 
 ```ts
 export interface AuthStateModel {
-  token: string | null;
-  username: string | null;
+  token: string | null
+  username: string | null
 }
 
 export class Login {
-  static readonly type = '[Auth] Login';
+  static readonly type = '[Auth] Login'
   constructor(public payload: { username: string; password: string }) {}
 }
 
 export class Logout {
-  static readonly type = '[Auth] Logout';
+  static readonly type = '[Auth] Logout'
 }
 ```
 
@@ -42,19 +41,19 @@ service.
   name: 'auth',
   defaults: {
     token: null,
-    username: null
-  }
+    username: null,
+  },
 })
 @Injectable()
 export class AuthState {
   @Selector()
   static token(state: AuthStateModel): string | null {
-    return state.token;
+    return state.token
   }
 
   @Selector()
   static isAuthenticated(state: AuthStateModel): boolean {
-    return !!state.token;
+    return !!state.token
   }
 
   constructor(private authService: AuthService) {}
@@ -65,23 +64,23 @@ export class AuthState {
       tap((result: { token: string }) => {
         ctx.patchState({
           token: result.token,
-          username: action.payload.username
-        });
-      })
-    );
+          username: action.payload.username,
+        })
+      }),
+    )
   }
 
   @Action(Logout)
   logout(ctx: StateContext<AuthStateModel>) {
-    const state = ctx.getState();
+    const state = ctx.getState()
     return this.authService.logout(state.token).pipe(
       tap(() => {
         ctx.setState({
           token: null,
-          username: null
-        });
-      })
-    );
+          username: null,
+        })
+      }),
+    )
   }
 }
 ```
@@ -99,9 +98,9 @@ Now let's wire up the state in our module.
   imports: [
     NgxsModule.forRoot([AuthState]),
     NgxsStoragePluginModule.forRoot({
-      key: 'auth.token'
-    })
-  ]
+      key: 'auth.token',
+    }),
+  ],
 })
 export class AppModule {}
 ```
@@ -119,8 +118,8 @@ export class AuthGuard implements CanActivate {
   constructor(private store: Store) {}
 
   canActivate() {
-    const isAuthenticated = this.store.selectSnapshot(AuthState.isAuthenticated);
-    return isAuthenticated;
+    const isAuthenticated = this.store.selectSnapshot(AuthState.isAuthenticated)
+    return isAuthenticated
   }
 }
 ```
@@ -135,9 +134,9 @@ export const routes: Routes = [
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule',
-    canActivate: [AuthGuard]
-  }
-];
+    canActivate: [AuthGuard],
+  },
+]
 ```
 
 A common action you want to take is when a user logs out, we want
@@ -148,15 +147,15 @@ the login page.
 ```ts
 @Component({
   selector: 'app',
-  template: '..'
+  template: '..',
 })
 export class AppComponent implements OnInit {
   constructor(private actions: Actions, private router: Router) {}
 
   ngOnInit() {
     this.actions.pipe(ofActionDispatched(Logout)).subscribe(() => {
-      this.router.navigate(['/login']);
-    });
+      this.router.navigate(['/login'])
+    })
   }
 }
 ```

@@ -15,14 +15,14 @@ import { Component, OnInit } from '@angular/core'
     <p class="mb-1 leading-6">
       I am currently working as an engineer at
       <a
-        class="hover:text-primary hover:font-medium hover:underline"
+        class="text-primary font-medium hover:underline"
         href="https://bnksolution.com/vi_VN/"
         target="_blank"
       >
         B&K Solution</a
       >. Currently working and participating in software development at
       <a
-        class="hover:text-primary hover:font-medium hover:underline"
+        class="text-primary font-medium hover:underline"
         href="https://www.cimbbank.com.vn/vi/personal/home.html"
         target="_blank"
       >

@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core'
       <Particles id="tsparticles" [options]="particlesOptions"></Particles>
       <div
         id="typing"
-        class="text-white text-6xl font-bold flex flex-col items-center"
+        class="text-white text-3xl font-bold flex flex-col items-center w-full"
       >
         <p>Hello, I'm Dai !!!</p>
         <a
