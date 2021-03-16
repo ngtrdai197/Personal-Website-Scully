@@ -3,23 +3,6 @@ import { Component, OnInit } from '@angular/core'
 @Component({
   selector: 'app-landing-page',
   template: `
-    <style>
-      .landing-page .full-bg {
-        background: url('./assets/full-bg.jpg') no-repeat;
-        background-position: center;
-        background-size: cover;
-        opacity: 0.35;
-      }
-      #typing {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      #typing a:hover {
-        cursor: pointer;
-      }
-    </style>
     <section class="landing-page h-screen w-screen relative overflow-hidden">
       <div class="full-bg w-full h-full absolute top-0 left-0"></div>
       <Particles id="tsparticles" [options]="particlesOptions"></Particles>
@@ -36,6 +19,28 @@ import { Component, OnInit } from '@angular/core'
       </div>
     </section>
   `,
+  styles: [
+    `
+        .landing-page {
+            background: url('./assets/full-bg.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .full-bg {
+            background-color: #4b81a2;
+            opacity: 0.5;
+        }
+        #typing {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #typing a:hover {
+            cursor: pointer;
+        }
+    `
+  ]
 })
 export class LandingPageComponent implements OnInit {
   particlesOptions = {
