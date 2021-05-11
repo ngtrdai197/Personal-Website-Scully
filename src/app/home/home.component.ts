@@ -19,13 +19,14 @@ import { swipeDownInAnimation } from '@/shared/slide-animation'
 })
 export class HomeComponent implements OnInit {
   routes$ = this.scullyRoutesService.available$.pipe(
-    map((scullyRoutes) =>
-      scullyRoutes.filter((scullyRoute) => scullyRoute.route.includes('/blog')),
+    map((routes) =>
+      routes.filter((route) => route.route.includes('/blog')),
     ),
   )
   constructor(private scullyRoutesService: ScullyRoutesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   public prepareRoute(outlet: RouterOutlet) {
     return (

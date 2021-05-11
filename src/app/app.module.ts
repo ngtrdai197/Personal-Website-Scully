@@ -10,7 +10,8 @@ import { AppComponent } from './app.component'
 import { CoreModule } from '@/core/core.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { environment } from '../environments/environment';
-import { LandingPageComponent } from './landing-page/landing-page.component'
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, LandingPageComponent],
@@ -24,6 +25,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component'
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
