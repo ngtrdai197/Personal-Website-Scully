@@ -28,6 +28,7 @@
     "@angular/service-worker": "~10.1.1",
     "@gammastream/scully-plugin-http404": "^1.0.1",
     "@nartc/tailwind-schematics": "^1.0.2",
+    "@ngneat/transloco": "^2.20.1",
     "@scullyio/init": "0.0.28",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",

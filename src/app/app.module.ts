@@ -4,6 +4,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib'
 import { ServiceWorkerModule } from '@angular/service-worker'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgParticlesModule } from 'ng-particles';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
@@ -11,7 +12,7 @@ import { CoreModule } from '@/core/core.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { environment } from '../environments/environment';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco/transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, LandingPageComponent],
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
       enabled: environment.production,
     }),
     HttpClientModule,
+    TranslocoRootModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
