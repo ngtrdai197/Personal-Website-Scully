@@ -2,6 +2,7 @@ import { ApplicationRef, Component, OnDestroy } from '@angular/core'
 import { SwUpdate } from '@angular/service-worker'
 import { interval, concat, Subscription } from 'rxjs'
 import { mapTo, startWith, first, map } from 'rxjs/operators'
+import { TranslocoService } from '@ngneat/transloco'
 @Component({
   selector: 'app-side',
   templateUrl: 'side.component.html',
@@ -18,6 +19,7 @@ export class SideComponent implements OnDestroy {
   constructor(
     readonly appRef: ApplicationRef,
     private readonly swUpdate: SwUpdate,
+    private readonly transloco: TranslocoService
   ) {
     if (swUpdate.isEnabled) {
       const appIsStable$ = appRef.isStable.pipe(
@@ -43,5 +45,9 @@ export class SideComponent implements OnDestroy {
   public reload(hasUpdate: boolean) {
     if (!hasUpdate) return
     window?.location?.reload()
+  }
+
+ public onChangeLanguage(language: string) {
+    this.transloco.setActiveLang(language);
   }
 }

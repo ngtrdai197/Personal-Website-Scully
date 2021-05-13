@@ -1,5 +1,5 @@
 <div class="wrapper p-4">
-  <div class="avatar flex justify-start pt-2 mb-2">
+  <div class="avatar flex justify-between pt-2 mb-2">
     <div
       *ngIf="{ hasUpdate: hasUpdate$ | async } as vm"
       class="wrapper-avatar"
@@ -21,12 +21,13 @@
       >
       </ng-container>
     </div>
+    <div class='flex items-center'>
+      <img src='assets/images/vi.png' alt='' style='width: 40px; height: 20px' class='cursor-pointer vi-flag' (click)="onChangeLanguage('vi')">
+      <img src='assets/images/en.svg' alt='' style='width: 40px; height: 20px' class='cursor-pointer' (click)="onChangeLanguage('en')">
+    </div>
   </div>
   <div class="name">Nguyen Dai</div>
-  <div class="text-sm">
-    I am a developer who is highly interested in TypeScript. My tech stack has
-    been full-stack TS such as Angular, React with TypeScript and NestJS.
-  </div>
+  <div class="text-sm">{{'info_myself' | transloco}}</div>
   <app-navigation></app-navigation>
   <app-social-icon></app-social-icon>
   <app-copy-right></app-copy-right>

@@ -12,7 +12,6 @@ import { CoreModule } from '@/core/core.module'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { environment } from '../environments/environment';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { TranslocoRootModule } from './transloco/transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, LandingPageComponent],
@@ -27,7 +26,6 @@ import { TranslocoRootModule } from './transloco/transloco-root.module';
       enabled: environment.production,
     }),
     HttpClientModule,
-    TranslocoRootModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
