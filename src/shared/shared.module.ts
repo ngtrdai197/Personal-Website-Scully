@@ -1,27 +1,26 @@
-import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { RouterModule } from '@angular/router'
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
-import { CopyRightComponent, NavigationComponent, SocialIconComponent, ToggleThemeComponent } from './components'
-import { SanitizerPipe } from './pipes/sanitizer.pipe'
-import { TranslocoRootModule } from '../app/transloco/transloco-root.module'
-import { TranslocoService } from '@ngneat/transloco'
+import {
+	CopyRightComponent,
+	NavigationComponent,
+	SocialIconComponent,
+	ToggleThemeComponent,
+} from './components';
+import { SanitizerPipe } from './pipes/sanitizer.pipe';
 
 const COMPONENTS = [
-  SocialIconComponent,
-  CopyRightComponent,
-  NavigationComponent,
-  SanitizerPipe,
-  ToggleThemeComponent,
-]
+	SocialIconComponent,
+	CopyRightComponent,
+	NavigationComponent,
+	SanitizerPipe,
+	ToggleThemeComponent,
+];
 
 @NgModule({
-  declarations: COMPONENTS,
-  imports: [CommonModule, RouterModule, TranslocoRootModule],
-  providers: [
-    TranslocoService,
-  ],
-  exports: [...COMPONENTS, TranslocoRootModule],
+	declarations: COMPONENTS,
+	imports: [CommonModule, RouterModule],
+	exports: [...COMPONENTS],
 })
-export class SharedModule {
-}
+export class SharedModule {}

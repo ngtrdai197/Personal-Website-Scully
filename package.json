@@ -49,6 +49,7 @@
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
     "postcss-scss": "2.1.1",
+    "prettier": "2.3.0",
     "scully-plugin-minify-html": "^3.1.2",
     "tailwindcss": "2.1.2",
     "ts-node": "~8.3.0",
@@ -57,5 +58,11 @@
   },
   "resolutions": {
     "webpack": "^5.0.0"
+  },
+  "prettier": {
+    "semi": true,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "useTabs": true
   }
 }
