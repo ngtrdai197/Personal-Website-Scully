@@ -12,7 +12,7 @@ const defaultOptions: HljsHtmlOptions = {
 export const hljsHtmlPlugin = (html: string) => {
 	const customHljsOptions = getPluginConfig<HljsHtmlOptions>(
 		HljsHtml,
-		'render'
+		'postProcessByHtml'
 	);
 	const hljsOptions = { ...defaultOptions, ...customHljsOptions };
 	const currentHtml = html.replace(
