@@ -1,31 +1,18 @@
-<!-- component -->
 <div class="w-full h-full">
   <div class="relative wrap overflow-hidden p-4 h-full w-full">
-    <div
-      class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
-      style="left: 50%; transform: translateX(-50%)"
-    ></div>
-    <div
-      class="mb-8 flex justify-between items-center w-full"
-      *ngFor="let exp of experiences; let i = index; let odd = odd"
-      [class.flex-row-reverse]="odd"
-    >
+    <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
+      style="left: 50%; transform: translateX(-50%)"></div>
+    <div class="mb-8 flex justify-between items-center w-full"
+      *ngFor="let exp of getExperiences(); let i = index; let odd = odd" [class.flex-row-reverse]="odd">
       <h3 class="flex items-start h-full w-5/12 italic text-sm">
         {{ exp.time }}
       </h3>
-      <div
-        class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full bg-primary"
-      >
+      <div class="z-20 flex items-center order-1 shadow-xl w-8 h-8 rounded-full bg-primary">
         <h1 class="mx-auto text-white font-semibold text-lg">{{ i + 1 }}</h1>
       </div>
-      <div
-        [class.item-right]="!odd"
-        [class.item-left]="odd"
-        class="relative order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 text-white"
-      >
-        <p
-          class="text-md leading-snug tracking-wide text-opacity-100 font-semibold mb-1"
-        >
+      <div [class.item-right]="!odd" [class.item-left]="odd"
+        class="relative order-1 rounded-lg shadow-xl w-5/12 px-6 py-4 text-white">
+        <p class="text-md leading-snug tracking-wide text-opacity-100 font-semibold mb-1">
           {{ exp.title }}
         </p>
         <p class="text-md font-semibold mb-2">

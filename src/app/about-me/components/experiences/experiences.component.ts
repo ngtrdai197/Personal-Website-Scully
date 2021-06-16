@@ -16,16 +16,12 @@ interface IExperience {
 	styleUrls: ['./experiences.component.scss'],
 })
 export class ExperiencesComponent implements OnInit {
-	public experiences: IExperience[] = [];
+	public experiences: IExperience[];
 	constructor(private readonly translocoService: TranslocoService) {}
 
-	ngOnInit(): void {
-		this.translocoService.langChanges$.subscribe(() => {
-			this.experiences = this.getExperiences;
-		});
-	}
+	ngOnInit(): void {}
 
-	private get getExperiences(): IExperience[] {
+	public getExperiences(): IExperience[] {
 		return [
 			{
 				time: this.translocoService.translate('startTimeAtBNK'),
@@ -35,15 +31,6 @@ export class ExperiencesComponent implements OnInit {
 				position: 'Fullstack web developer',
 				tech: 'Technologies: ReactJs, NestJs framework (NodeJs), Typescipt, PostgresQL, MySQL (TypeORM), Docker, ...',
 			},
-			// {
-			//   time: 'September 2020 - November 2020',
-			//   title: 'Software Development Engineer',
-			//   company: '@FAVIE-TECH',
-			//   url:'https://favie.tech/',
-			//   position: 'Fullstack web developer',
-			//   tech:
-			//     'Technologies: Angular, NestJs framework (NodeJs), GraphQL, Typescipt, PostgresQL (TypeORM), Docker, ...',
-			// },
 			{
 				time: this.translocoService.translate('startTimeAtAntTech'),
 				title: 'Software Development Engineer',

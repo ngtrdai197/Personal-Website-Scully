@@ -10,6 +10,7 @@ import {
 import { Injectable, NgModule } from '@angular/core';
 
 import { environment } from '@/environments/environment';
+import { LANGUAGES, DEFAULT_LANGUAGE } from './language.enum';
 
 @Injectable({ providedIn: 'root' })
 export class TranslocoHttpLoader implements TranslocoLoader {
@@ -26,10 +27,10 @@ export class TranslocoHttpLoader implements TranslocoLoader {
 		{
 			provide: TRANSLOCO_CONFIG,
 			useValue: translocoConfig({
-				availableLangs: ['en', 'vi'],
-				defaultLang: 'en',
+				availableLangs: [LANGUAGES.EN, LANGUAGES.VI],
+				defaultLang: DEFAULT_LANGUAGE,
 				reRenderOnLangChange: true,
-				prodMode: environment.production,
+				prodMode: !environment.production,
 			}),
 		},
 		{ provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },

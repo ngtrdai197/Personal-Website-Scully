@@ -5,6 +5,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgParticlesModule } from 'ng-particles';
 import { HttpClientModule } from '@angular/common/http';
+import { of } from 'rxjs';
+import { catchError, switchMap, tap } from 'rxjs/operators';
+import { TranslocoService } from '@ngneat/transloco';
+import { APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,17 +16,15 @@ import { CoreModule } from '@/core/core.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { environment } from '@/environments/environment';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { of } from 'rxjs';
-import { switchMap, tap } from 'rxjs/operators';
-import { TranslocoService } from '@ngneat/transloco';
-import { APP_INITIALIZER } from '@angular/core';
+import { LANGUAGES } from './transloco/language.enum';
 
-function preloadLang(transloco: TranslocoService) {
-	const lang = localStorage.getItem('currentLang') || 'en';
+function initializerLangFactory(transloco: TranslocoService) {
+	const lang = localStorage.getItem('currentLang') || LANGUAGES.EN;
 	return function () {
 		return of(lang).pipe(
 			tap(lang => transloco.setActiveLang(lang)),
 			switchMap(lang => transloco.load(lang).toPromise()),
+			catchError(err => err),
 		);
 	};
 }
@@ -45,7 +47,7 @@ function preloadLang(transloco: TranslocoService) {
 		{
 			provide: APP_INITIALIZER,
 			multi: true,
-			useFactory: preloadLang,
+			useFactory: initializerLangFactory,
 			deps: [TranslocoService],
 		},
 	],
