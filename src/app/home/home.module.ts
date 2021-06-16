@@ -16,17 +16,13 @@ const routes: Routes = [
 			{
 				path: 'me',
 				loadChildren: () =>
-					import('@/app/about-me/about-me.module').then(
-						(m) => m.AboutMeModule
-					),
+					import('@/app/about-me/about-me.module').then(m => m.AboutMeModule),
 				data: { animation: 'me' },
 			},
 			{
 				path: 'blog-list',
 				loadChildren: () =>
-					import('@/app/blogs/blogs.module').then(
-						(m) => m.BlogsModule
-					),
+					import('@/app/blogs/blogs.module').then(m => m.BlogsModule),
 				data: { animation: 'blog-list' },
 			},
 		],

@@ -1,4 +1,4 @@
 export interface ISocial {
-  link: string
-  svgLink: string
+	link: string;
+	svgLink: string;
 }

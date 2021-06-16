@@ -1,13 +1,13 @@
-import { Component, HostBinding, OnInit } from '@angular/core'
+import { Component, HostBinding, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-copy-right',
-  templateUrl: './copy-right.component.html',
-  styleUrls: ['./copy-right.component.scss'],
+	selector: 'app-copy-right',
+	templateUrl: './copy-right.component.html',
+	styleUrls: ['./copy-right.component.scss'],
 })
 export class CopyRightComponent implements OnInit {
-  @HostBinding('class') fontSize = 'text-sm cursor-pointer text-center'
-  constructor() {}
+	@HostBinding('class') fontSize = 'text-sm cursor-pointer text-center';
+	constructor() {}
 
-  ngOnInit(): void {}
+	ngOnInit(): void {}
 }

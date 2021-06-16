@@ -8,7 +8,8 @@ import {
 	TranslocoModule,
 } from '@ngneat/transloco';
 import { Injectable, NgModule } from '@angular/core';
-import { environment } from '../../environments/environment';
+
+import { environment } from '@/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class TranslocoHttpLoader implements TranslocoLoader {
@@ -27,7 +28,6 @@ export class TranslocoHttpLoader implements TranslocoLoader {
 			useValue: translocoConfig({
 				availableLangs: ['en', 'vi'],
 				defaultLang: 'en',
-				// Remove this option if your application doesn't support changing language in runtime.
 				reRenderOnLangChange: true,
 				prodMode: environment.production,
 			}),

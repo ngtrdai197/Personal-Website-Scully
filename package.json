@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "format": "prettier --write \"src/**/*.ts\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -52,10 +53,21 @@
     "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
     "postcss-scss": "2.1.1",
+    "prettier": "^2.3.1",
     "scully-plugin-minify-html": "^3.1.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.2.4"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "useTabs": true,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "avoid"
   }
 }

@@ -1,13 +1,13 @@
-import { Pipe, PipeTransform } from '@angular/core'
-import { DomSanitizer } from '@angular/platform-browser'
+import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Pipe({
-  name: 'sanitizer',
+	name: 'sanitizer',
 })
 export class SanitizerPipe implements PipeTransform {
-  constructor(private sanitizer: DomSanitizer) {}
+	constructor(private sanitizer: DomSanitizer) {}
 
-  transform(value: string): unknown {
-    return this.sanitizer.bypassSecurityTrustHtml(value)
-  }
+	transform(value: string): unknown {
+		return this.sanitizer.bypassSecurityTrustHtml(value);
+	}
 }

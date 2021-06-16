@@ -14,13 +14,15 @@ const COMPONENTS = [
 	SocialIconComponent,
 	CopyRightComponent,
 	NavigationComponent,
-	SanitizerPipe,
 	ToggleThemeComponent,
 ];
 
+const PIPES = [SanitizerPipe];
+
+const DELEXS = [...COMPONENTS, ...PIPES];
 @NgModule({
-	declarations: COMPONENTS,
+	declarations: DELEXS,
 	imports: [CommonModule, RouterModule],
-	exports: [...COMPONENTS],
+	exports: DELEXS,
 })
 export class SharedModule {}

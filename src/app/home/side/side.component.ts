@@ -13,26 +13,26 @@ export class SideComponent implements OnDestroy {
 	public hasUpdate$ = this.swUpdate.available.pipe(
 		map(({ type }) => console.log(type)),
 		mapTo(true),
-		startWith(false)
+		startWith(false),
 	);
 	public subscription: Subscription;
 
 	constructor(
 		readonly appRef: ApplicationRef,
 		private readonly swUpdate: SwUpdate,
-		private readonly transloco: TranslocoService
+		private readonly transloco: TranslocoService,
 	) {
 		if (swUpdate.isEnabled) {
 			const appIsStable$ = appRef.isStable.pipe(
-				first((isStable) => isStable === true)
+				first(isStable => isStable === true),
 			);
 			const everyFiveMinutes$ = interval(5 * 60 * 1000); // every 5 minutes
 			const everyFiveMinutesOnceAppIsStable$ = concat(
 				appIsStable$,
-				everyFiveMinutes$
+				everyFiveMinutes$,
 			);
 			this.subscription = everyFiveMinutesOnceAppIsStable$.subscribe(() =>
-				swUpdate.checkForUpdate()
+				swUpdate.checkForUpdate(),
 			);
 		}
 	}
@@ -50,5 +50,6 @@ export class SideComponent implements OnDestroy {
 
 	public onChangeLanguage(language: string) {
 		this.transloco.setActiveLang(language);
+		localStorage.setItem('currentLang', language);
 	}
 }
