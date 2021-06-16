@@ -21,7 +21,7 @@ export class ExperiencesComponent implements OnInit {
 
 	ngOnInit(): void {}
 
-	public getExperiences(): IExperience[] {
+	public get getExperiences(): IExperience[] {
 		return [
 			{
 				time: this.translocoService.translate('startTimeAtBNK'),

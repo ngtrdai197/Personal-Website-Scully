@@ -30,7 +30,7 @@ export class TranslocoHttpLoader implements TranslocoLoader {
 				availableLangs: [LANGUAGES.EN, LANGUAGES.VI],
 				defaultLang: DEFAULT_LANGUAGE,
 				reRenderOnLangChange: true,
-				prodMode: !environment.production,
+				prodMode: environment.production,
 			}),
 		},
 		{ provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },

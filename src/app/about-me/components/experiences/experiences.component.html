@@ -3,7 +3,7 @@
     <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border"
       style="left: 50%; transform: translateX(-50%)"></div>
     <div class="mb-8 flex justify-between items-center w-full"
-      *ngFor="let exp of getExperiences(); let i = index; let odd = odd" [class.flex-row-reverse]="odd">
+      *ngFor="let exp of getExperiences; let i = index; let odd = odd" [class.flex-row-reverse]="odd">
       <h3 class="flex items-start h-full w-5/12 italic text-sm">
         {{ exp.time }}
       </h3>
