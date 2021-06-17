@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import Typed from 'typed.js';
 
 @Component({
 	selector: 'app-landing-page',
@@ -10,11 +11,11 @@ import { Component, OnInit } from '@angular/core';
 				id="typing"
 				class="text-white text-3xl font-bold flex flex-col items-center w-full"
 			>
-				<p>Hello, I'm Dai !!!</p>
+				<p #typing></p>
 				<a
 					routerLink="/iadn"
-					class="italic font-medium text-white text-sm hover:underline hover:text-blue-500"
-					>View me</a
+					class="mt-2 italic font-medium text-white text-sm hover:underline hover:text-blue-500"
+					>🚀 View me 🚀</a
 				>
 			</div>
 		</section>
@@ -42,8 +43,8 @@ import { Component, OnInit } from '@angular/core';
 		`,
 	],
 })
-export class LandingPageComponent implements OnInit {
-	particlesOptions = {
+export class LandingPageComponent implements AfterViewInit {
+	public particlesOptions = {
 		fpsLimit: 60,
 		interactivity: {
 			detectsOn: 'canvas',
@@ -117,7 +118,20 @@ export class LandingPageComponent implements OnInit {
 		},
 		detectRetina: true,
 	};
+	public strings: ["Hello, I'm Dai !!!", "I'm a web developer"];
+
+	@ViewChild('typing') elementRef: ElementRef<any>;
+
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngAfterViewInit() {
+		new Typed(this.elementRef.nativeElement, {
+			strings: ["Hello there, ^400 I'm Dai !", "I'm a Web Developer"],
+			typeSpeed: 60,
+			backSpeed: 60,
+			backDelay: 200,
+			loop: true,
+			cursorChar: ' ^',
+		});
+	}
 }
