@@ -15,7 +15,7 @@ import Typed from 'typed.js';
 				<a
 					routerLink="/iadn"
 					class="mt-2 italic font-medium text-white text-sm hover:underline hover:text-blue-500"
-					>🚀 View me 🚀</a
+					>🚀 <span class="px-1">View me</span> 🚀</a
 				>
 			</div>
 		</section>
