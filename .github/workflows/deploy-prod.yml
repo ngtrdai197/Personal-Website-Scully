@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
-        run: npm install --only=prod
+        run: npm install
       - name: Build
         run: npm run scully:prod
       - name: Archive Production Artifact
