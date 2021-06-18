@@ -126,9 +126,9 @@ export class LandingPageComponent implements AfterViewInit {
 
 	ngAfterViewInit() {
 		new Typed(this.elementRef.nativeElement, {
-			strings: ["Hello there, ^400 I'm Dai !", "I'm a Web Developer"],
-			typeSpeed: 60,
-			backSpeed: 60,
+			strings: ["Hi there, ^400 I'm Dai !!!", "I'm a Web Developer ."],
+			typeSpeed: 50,
+			backSpeed: 50,
 			backDelay: 200,
 			loop: true,
 			cursorChar: ' ^',
