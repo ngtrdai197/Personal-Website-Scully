@@ -9,5 +9,3 @@ tags: ['Angular', 'Firebase Hosting', 'Github Actions']
 ---
 
 ### How to deploy angular application to firebase and configure auto-deploy with Github actions
-
-> TODO:
