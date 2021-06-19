@@ -1,5 +1,5 @@
 <ul class="px-4 divide-gray-600 divide-y">
-  <li *ngFor="let route of routes$ | async" class="mb-2 flex flex-column">
+  <li *ngFor="let route of routes$ | async" class="mb-2 flex flex-col">
     <div class="flex justify-between mt-3">
       <span>{{route.publishedAt | date: 'mediumDate'}}</span>
       <div class="tag">
