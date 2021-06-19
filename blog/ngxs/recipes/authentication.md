@@ -4,6 +4,7 @@ description: 'Ngxs authentication'
 published: true
 slugs: 'authentication'
 image: 'assets/logo.png'
+publishedAt: 2020-08-27
 tags: ['Angular', 'Ngxs']
 ---
 

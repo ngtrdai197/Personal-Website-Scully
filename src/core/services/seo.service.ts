@@ -7,6 +7,9 @@ import { environment as env } from '@/environments/environment';
 
 export interface ISeo extends ScullyRoute {
 	url?: string;
+	publishedAt?: string;
+	descriptions?: string;
+	tags?: string[];
 }
 
 @Injectable({
