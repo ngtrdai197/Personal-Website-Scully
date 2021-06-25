@@ -4,6 +4,7 @@
     *ngFor="let social of socials"
     target="_blank"
     rel=”noopener”
+    [attr.aria-label]="social.ariaLabel"
     [href]="social.link"
     [innerHtml]="social.svgLink | sanitizer"
   ></a>

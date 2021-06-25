@@ -14,11 +14,13 @@ import { swipeDownInAnimation } from '@/shared/slide-animation';
 					class="navigate -bottom-35"
 					[innerHTML]="svgIcon.svgArrowUp | sanitizer"
 					routerLink="/iadn/me"
+					aria-label="Go to me"
 				></a>
 				<a
 					class="navigate -bottom-10"
 					[innerHTML]="svgIcon.svgArrowDown | sanitizer"
-					routerLink="experiences"
+					routerLink="./experiences"
+					aria-label="Go to experiences"
 				></a>
 			</div>
 		</section>

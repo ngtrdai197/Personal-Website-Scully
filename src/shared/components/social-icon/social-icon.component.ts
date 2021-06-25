@@ -8,11 +8,27 @@ import { ISocial } from '@/core/models/social.interface';
 	styleUrls: ['./social-icon.component.scss'],
 })
 export class SocialIconComponent implements OnInit {
-	public socials: Array<ISocial> = [
-		{ svgLink: twitter, link: 'https://twitter.com/ngtrdai197' },
-		{ svgLink: facebook, link: 'https://www.facebook.com/ngtrdai197' },
-		{ svgLink: github, link: 'https://github.com/ngtrdai197' },
-		{ svgLink: linkedin, link: 'https://www.linkedin.com/in/ngtrdai197/' },
+	public socials: Array<ISocial & { ariaLabel: string }> = [
+		{
+			svgLink: twitter,
+			link: 'https://twitter.com/ngtrdai197',
+			ariaLabel: 'Link to Twitter',
+		},
+		{
+			svgLink: facebook,
+			link: 'https://www.facebook.com/ngtrdai197',
+			ariaLabel: 'Link to Facebook',
+		},
+		{
+			svgLink: github,
+			link: 'https://github.com/ngtrdai197',
+			ariaLabel: 'Link to Github',
+		},
+		{
+			svgLink: linkedin,
+			link: 'https://www.linkedin.com/in/ngtrdai197/',
+			ariaLabel: 'Link to LinkedIn',
+		},
 	];
 	constructor() {}
 
