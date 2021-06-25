@@ -9,7 +9,6 @@
     left: -15px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-
     border-right: 15px solid var(--time-line-right);
   }
 }
@@ -24,7 +23,14 @@
     right: -15px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-
     border-left: 15px solid var(--time-line-left);
   }
+}
+
+.orderIndexLeft {
+  @apply bg-time-line-left;
+}
+
+.orderIndexRight {
+  @apply bg-time-line-right;
 }

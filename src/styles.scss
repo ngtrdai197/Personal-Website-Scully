@@ -29,8 +29,8 @@ h6 {
 }
 
 :root .theme-dark {
-  --primary: theme('colors.blue.500');
-  --secondary: theme('colors.blue.300');
+  --primary: theme('colors.green.400');
+  --secondary: theme('colors.green.300');
   --background-color: theme('colors.gray.800');
   --text-color: theme('colors.white');
   --gray-light: theme('colors.gray.300');
@@ -38,7 +38,7 @@ h6 {
   --gray-dark: theme('colors.gray.500');
   --shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1),
     0 4px 6px -2px rgba(255, 255, 255, 0.05);
-  --time-line-right: theme('backgroundColor.blue.500');
+  --time-line-right: theme('backgroundColor.green.700');
   --time-line-left: theme('backgroundColor.purple.700');
 }
 
@@ -52,7 +52,7 @@ h6 {
   --gray-dark: theme('colors.gray.700');
   --shadow: theme('boxShadow.lg');
   --time-line-right: theme('backgroundColor.purple.700');
-  --time-line-left: theme('backgroundColor.blue.500');
+  --time-line-left: theme('backgroundColor.green.600');
 }
 
 body {

@@ -3,6 +3,7 @@
     class="icon"
     *ngFor="let social of socials"
     target="_blank"
+    rel=”noopener”
     [href]="social.link"
     [innerHtml]="social.svgLink | sanitizer"
   ></a>
