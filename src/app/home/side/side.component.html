@@ -11,9 +11,9 @@
 			</ng-container>
 		</div>
 		<div class="flex items-center">
-			<img src="assets/images/vi.png" alt="" style="width: 30px; height: 20px" class="cursor-pointer vi-flag"
+			<img src="assets/images/vi.png" alt="vi"  width="30" height="20" class="cursor-pointer vi-flag object-contain"
 				(click)="onChangeLanguage('vi')" />
-			<img src="assets/images/en.png" alt="" style="width: 30px; height: 20px" class="cursor-pointer"
+			<img src="assets/images/en.png" alt="en" width="30" height="20" class="cursor-pointer object-contain"
 				(click)="onChangeLanguage('en')" />
 		</div>
 	</div>
@@ -27,13 +27,13 @@
 </div>
 
 <ng-template #tmplNoNewVersion let-vm="vm">
-	<img class="rounded-full w-16 h-16" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
+	<img class="rounded-full" width="64" height="64" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
 		src="assets/avatar-cover.jpeg" alt="" />
 </ng-template>
 
 <ng-template #tmplNewVersion let-vm="vm">
 	<abbr title="
 Click here to download a new version">
-		<img class="rounded-full w-16" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
+		<img class="rounded-full w-16 object-contain" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
 			src="assets/avatar-cover.jpeg" alt="" (click)="reload(vm.hasUpdate)" /> </abbr>
 </ng-template>

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 	template: `
 		<ng-container *transloco="let t">
 			<h3 class="mb-2 leading-6 text-3xl font-medium">{{ t('me') }}</h3>
-			<h6 class="mb-3 leading-6 italic">Junior Web Developer</h6>
+			<h5 class="mb-3 leading-6 italic">Junior Web Developer</h5>
 
 			<p class="mb-1 leading-6 text-sm">{{ t('hi') }}</p>
 			<p class="mb-1 leading-6 text-sm">{{ t('school') }}</p>
