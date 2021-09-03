@@ -1,17 +1,19 @@
-<nav class="flex flex-row items-center lg:items-start my-4">
-	<a routerLink="/iadn/me" routerLinkActive="link-active" class="nav-item"
-	>About me</a
-	>
-	<a
-		routerLink="./blog-list"
+<nav class="flex flex-col items-center lg:items-start justify-center my-4">
+	<div>
+
+		<a routerLink="./me" routerLinkActive="link-active" class="nav-item">About me</a>
+		<a routerLink="/my-cv" routerLinkActive="link-active" class="nav-item">My CV</a>
+	</div>
+	<div>
+		<a routerLink="./blog-list" routerLinkActive="link-active" [routerLinkActiveOptions]="{ exact: true }"
+			class="nav-item">Blogs</a>
+		<a href="https://instagram.nguyendai.dev/" rel="noopener" target="_blank" class="nav-item">Project Instagram
+			clone</a>
+	</div>
+	<!-- <a
+		routerLink="./projects"
 		routerLinkActive="link-active"
-		[routerLinkActiveOptions]="{ exact: true }"
+		[routerLinkActiveOptions]="{ exact: false }"
 		class="nav-item"
-	>Blogs</a
-	>
-</nav>
-<nav class="flex flex-row mb-4">
-	<a href="https://instagram.nguyendai.dev/" rel="noopener" target="_blank" class="nav-item"
-	>Project Instagram clone</a
-	>
+	>Projects</a> -->
 </nav>

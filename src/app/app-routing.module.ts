@@ -14,6 +14,12 @@ const routes: Routes = [
 		loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule),
 	},
 	{
+		path: 'my-cv',
+		loadChildren: () =>
+			import('@/app/my-cv/my-cv.module').then(m => m.MyCvModule),
+		data: { animation: 'my-cv' },
+	},
+	{
 		path: '404',
 		component: PageNotFoundComponent,
 	},

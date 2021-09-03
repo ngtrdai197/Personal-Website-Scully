@@ -39,12 +39,13 @@ export class BlogComponent implements OnInit, OnDestroy {
 	}
 
 	private getDataSeo(data: ISeo): ISeo {
-		return data?.title
-			? {
-					...data,
-					url: `${env.baseUrl}${data.route}`,
-					image: `${env.baseUrl}/${data.image}`,
-			  }
-			: this.seoService.baseSeo;
+		if (data.title) {
+			return {
+				...data,
+				url: `${env.baseUrl}${data.route}`,
+				image: `${env.baseUrl}/${data.image}`,
+			};
+		}
+		return this.seoService.baseSeo;
 	}
 }
