@@ -10,8 +10,9 @@ tags: ['Angular', 'Nginx', 'Docker']
 
 ### Dockerized an Angular application for production, and run on Nginx
 <hr />
+<br />
 
-- A `Dockerfile` looks like this:
+`Dockerfile` looks like this:
 
 ```bash
 FROM node:12-alpine as builder
@@ -41,7 +42,8 @@ EXPOSE 80 443
 <hr />
 <br />
 
-- A `nginx.cof` looks like this:
+`nginx.cof` looks like this:
+
 ```bash
 worker_processes 4;
 
