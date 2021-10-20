@@ -1,23 +1,17 @@
 <ul class="px-4 divide-gray-600 divide-y">
   <li *ngFor="let route of routes$ | async" class="mb-2 flex flex-col">
-    <div class="flex justify-between mt-3">
+    <div class="flex-col md:flex justify-start md:justify-between mt-3">
       <span>{{route.publishedAt | date: 'mediumDate'}}</span>
-      <div class="tag">
-        <span
-          *ngFor="let tag of route.tags"
-          class="mx-1 py-1 px-3 cursor-pointer text-white bg-primary hover:bg-secondary rounded-full"
-          >{{ tag }}</span
-        >
+      <div class="tag flex-col md:flex">
+        <span *ngFor="let tag of route.tags"
+          class="mx-1 py-1 px-3 cursor-pointer text-white bg-primary hover:bg-secondary rounded-full text-xs md:text-sm">{{
+          tag }}</span>
       </div>
     </div>
-    <a [routerLink]="[route.route]" class="font-bold text-2xl hover:text-secondary mt-4 mb-2">{{
+    <a [routerLink]="[route.route]" class="font-bold text-lg md:text-2xl hover:text-secondary mt-4 mb-2">{{
       route.title
-    }}</a>
-    <p>{{ route.description }}</p>
-    <a
-      [routerLink]="route.route"
-      class="text-primary hover:text-secondary font-bold mt-1"
-      >Read more ...</a
-    >
+      }}</a>
+    <p class="text-sm md:text-base">{{ route.description }}</p>
+    <a [routerLink]="route.route" class="text-primary hover:text-secondary font-bold mt-1">Read more ...</a>
   </li>
 </ul>
