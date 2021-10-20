@@ -1,8 +1,8 @@
 <ul class="px-4 divide-gray-600 divide-y">
   <li *ngFor="let route of routes$ | async" class="mb-2 flex flex-col">
-    <div class="flex-col md:flex justify-start md:justify-between mt-3">
+    <div class="flex-col flex md:flex-row justify-start md:justify-between mt-3">
       <span>{{route.publishedAt | date: 'mediumDate'}}</span>
-      <div class="tag flex-col md:flex">
+      <div class="tag flex-col flex md:flex-row">
         <span *ngFor="let tag of route.tags"
           class="mx-1 py-1 px-3 cursor-pointer text-white bg-primary hover:bg-secondary rounded-full text-xs md:text-sm">{{
           tag }}</span>
