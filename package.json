@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "NG_PERSISTENT_BUILD_CACHE=1 ng serve",
     "build": "ng build",
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "ng test",
@@ -13,7 +13,7 @@
     "build:hljs": "tsc -p plugins/hljs",
     "scully-build": "rm -rf ./dist && npm run build:hljs && ng build --configuration production && npm run scully",
     "scully:serve": "scully serve",
-    "scully:prod": "rm -rf ./dist && npm run build:hljs && ng build --configuration production && npm run scully -- --scanRoutes && npm run pwa:regen",
+    "scully:prod": "NG_PERSISTENT_BUILD_CACHE=1 rm -rf ./dist && npm run build:hljs && ng build --configuration production && npm run scully -- --scanRoutes && npm run pwa:regen",
     "pwa:regen": "rm dist/static/ngsw.json;node_modules/.bin/ngsw-config dist/static ./ngsw-config.json"
   },
   "private": true,

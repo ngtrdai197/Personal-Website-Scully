@@ -1,13 +1,13 @@
 ---
-title: How to deploy Nodejs app and Web app into Nginx
-description: 'How to deploy Nodejs app and Web app into Nginx'
+title: How to deploy a web application using Nginx, and forward to a Node.js application against an endpoint
+description: 'How to deploy a web application using Nginx, and forward to a Node.js application against an endpoint'
 published: true
 slugs: 'how-to-deploy-nodejs-app-and-web-app-into-nginx'
 publishedAt: 2021-10-18
 tags: ['Nginx', 'Nodejs', 'Web app']
 ---
 
-## How to deploy Nodejs app and Web app into Nginx
+## How to deploy a web application using Nginx, and forward to a Node.js application against an endpoint
 
 ### Step 1 - Installing Nginx
 Because Nginx is available in Ubuntu’s default repositories, it is possible to install it from these repositories using the apt packaging system.
