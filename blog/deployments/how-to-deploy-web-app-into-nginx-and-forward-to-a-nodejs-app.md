@@ -1,10 +1,12 @@
 ---
 title: How to deploy a web application using Nginx, and forward to a Node.js application against an endpoint
 description: 'How to deploy a web application using Nginx, and forward to a Node.js application against an endpoint'
+image: 'assets/Angular-Nodejs-Nginx.png'
 published: true
 slugs: 'how-to-deploy-nodejs-app-and-web-app-into-nginx'
 publishedAt: 2021-10-18
 tags: ['Nginx', 'Nodejs', 'Web app']
+
 ---
 
 ## How to deploy a web application using Nginx, and forward to a Node.js application against an endpoint
@@ -155,6 +157,9 @@ server {
 }
 ```
 > With location `/api/` when enter `domain/api/` nginx going to forward to `http://localhost:3333/`
+
+`http://localhost:3333/` will be where we call an application running on port 3333. In my case it will be a Node.js application
+
 Notice that we’ve updated the root configuration to our new directory, and the `server_name` to our domain name.
 
 Next, let’s enable the file by creating a link from it to the sites-enabled directory, which Nginx reads from during startup:
