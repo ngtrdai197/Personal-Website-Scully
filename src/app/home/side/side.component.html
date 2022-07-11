@@ -27,13 +27,13 @@
 </div>
 
 <ng-template #tmplNoNewVersion let-vm="vm">
-	<img class="rounded-full" width="64" height="64" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
+	<img class="rounded-full w-16 h-64" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
 		src="assets/avatar-cover.jpg" alt="" />
 </ng-template>
 
 <ng-template #tmplNewVersion let-vm="vm">
 	<abbr title="
 Click here to download a new version">
-		<img class="rounded-full w-16 object-contain" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
+		<img class="rounded-full w-16 h-64 object-contain" [class.pointer-events-none]="!vm.hasUpdate" [class.cursor-pointer]="vm.hasUpdate"
 			src="assets/avatar-cover.jpg" alt="" (click)="reload(vm.hasUpdate)" /> </abbr>
 </ng-template>
