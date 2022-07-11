@@ -24,12 +24,20 @@ export class ExperiencesComponent implements OnInit {
 	public get getExperiences(): IExperience[] {
 		return [
 			{
+				time: this.translocoService.translate('startTimeAtCPL'),
+				title: 'Software Development Engineer',
+				company: '@CRYPTOPIE-LABO',
+				url: 'https://cryptopie-labo.com/',
+				position: 'Backend developer',
+				tech: 'Technologies: NestJs, MySQL, Redis, Docker, K8s, Kafka, gRPC...',
+			},
+			{
 				time: this.translocoService.translate('startTimeAtBNK'),
 				title: 'Software Development Engineer',
 				company: '@BnK SOLUTION',
 				url: 'https://bnksolution.com/vi_VN/',
 				position: 'Fullstack web developer',
-				tech: 'Technologies: ReactJs, NestJs framework (NodeJs), Typescipt, PostgresQL, MySQL (TypeORM), Docker, ...',
+				tech: 'Technologies: ReactJs, NestJs, Typescipt, PostgresQL, MySQL, Docker, ...',
 			},
 			{
 				time: this.translocoService.translate('startTimeAtAntTech'),
@@ -37,7 +45,7 @@ export class ExperiencesComponent implements OnInit {
 				company: '@ANT-TECH',
 				url: 'https://ant-tech.eu/',
 				position: 'Fullstack web developer',
-				tech: 'Technologies: Angular, NestJs framework (NodeJs), GraphQL, Typescipt, MongoDB, Docker, ...',
+				tech: 'Technologies: Angular, NestJs, GraphQL, Typescipt, MongoDB, Docker, ...',
 			},
 			{
 				time: this.translocoService.translate('startTimeAtJaneto'),
