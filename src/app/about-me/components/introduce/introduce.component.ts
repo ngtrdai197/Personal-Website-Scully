@@ -13,21 +13,20 @@ import { Component, OnInit } from '@angular/core';
 				{{ t('workAt') }}
 				<a
 					class="text-primary font-medium hover:underline"
-					href="https://bnksolution.com/vi_VN/"
+					href="https://cryptopie-labo.com/"
 					target="_blank"
 					rel="”noopener”"
 				>
-					B&K Solution </a
+					Cryptopie-Labo </a
 				>. {{ t('participatingAt')
 				}}<a
 					class="text-primary font-medium hover:underline"
-					href="https://www.cimbbank.com.vn/vi/personal/home.html"
+					href="https://bitcastle.io/"
 					target="_blank"
 					rel="”noopener”"
 				>
-					CIMB</a
+				Bitcastle</a
 				>
-				{{ t('bankInVietNam') }}
 			</p>
 			<p class="mb-1 leading-6 text-sm">{{ t('stackTech') }}</p>
 			<p class="mb-1 leading-6 text-sm">{{ t('mobileTech') }}</p>
