@@ -29,7 +29,7 @@ export class ExperiencesComponent implements OnInit {
 				company: '@CRYPTOPIE-LABO',
 				url: 'https://cryptopie-labo.com/',
 				position: 'Backend developer',
-				tech: 'Technologies: NestJs, MySQL, Redis, Docker, K8s, Kafka, gRPC...',
+				tech: 'Technologies: NestJs, MySQL, Redis, Docker, K8s, Kafka, gRPC, ...',
 			},
 			{
 				time: this.translocoService.translate('startTimeAtBNK'),

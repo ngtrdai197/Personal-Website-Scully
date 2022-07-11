@@ -17,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
 					target="_blank"
 					rel="”noopener”"
 				>
-					Cryptopie-Labo </a
+					Cryptopie-Labo</a
 				>. {{ t('participatingAt')
 				}}<a
 					class="text-primary font-medium hover:underline"
