@@ -43,8 +43,8 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-builders/custom-webpack": "10.0.0",
-    "@angular-devkit/build-angular": "~12.0.4",
+    "@angular-builders/custom-webpack": "15.0.0",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular/cli": "~12.0.4",
     "@angular/compiler-cli": "~12.0.4",
     "@fullhuman/postcss-purgecss": "^3.0.0",
@@ -52,7 +52,7 @@
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.36",
     "postcss-import": "12.0.1",
-    "postcss-loader": "3.0.0",
+    "postcss-loader": "7.0.2",
     "postcss-scss": "2.1.1",
     "prettier": "^2.3.1",
     "scully-plugin-minify-html": "^3.1.2",
