@@ -30,7 +30,7 @@
     "@gammastream/scully-plugin-http404": "^1.0.1",
     "@nartc/tailwind-schematics": "^1.0.2",
     "@ngneat/transloco": "^2.21.0",
-    "@scullyio/init": "0.0.28",
+    "@scullyio/init": "2.1.41",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
     "ng-particles": "^2.11.0",
